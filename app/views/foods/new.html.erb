@@ -1,0 +1,29 @@
+<h1> creat a new cook </h1>
+
+<% if @food.errors.any? %>
+    <h2> the following Error Prevent </h2>
+    <ul>
+        <% food.errors.full_message.each do |m| %>
+            <li> <%= m %></li>
+        <% end %>
+    </ul>
+    <%end%>
+
+
+
+<%= form_for @food do |f| %>
+    <p>
+        <%= f.label :foodname %> <br/>
+        <%= f.text_field :foodname %>
+    </p>
+
+    <p>
+        <%= f.label :aboutfood %> <br/>
+        <%= f.text_area :aboutfood %> 
+    </p>
+
+    <p>
+    <%= f.submit %>
+    </p>
+
+<% end %>
