@@ -1,0 +1,28 @@
+<h1> This is Test Page </h1>
+
+<% if @test.errors.any? %>
+	<h2> Please Solve This Errors: </h2>
+	<ul>
+		<% @test.errors.full_messages.each do |msg| %>
+			<li><%=msg%></li>
+		<%end%>
+	</ul>
+<%end%>	
+
+
+
+<%= form_for @test do |f| %>
+	<p>
+		<%= f.label :name %> <br/>
+		<%= f.text_field :name %>
+	</p>
+
+	<p>
+		<%= f.label :family %> <br/>
+		<%= f.text_area :family %>
+	</p>
+
+	</p>
+		<%= f.submit %>
+	</p>
+<%end%>
