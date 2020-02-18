@@ -5,6 +5,10 @@ ruby '2.6.5'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.2', '>= 6.0.2.1'
+gem 'bootstrap-sass', '~> 3.4.1'
+gem 'jquery-rails', '~> 4.3', '>= 4.3.5'
+gem 'uglifier', '~> 4.2'
+gem 'coffee-rails', '~> 5.0'
 # Use sqlite3 as the database for Active Record
 
 # Use Puma as the app server
@@ -49,6 +53,7 @@ end
 
 group :production do
   gem 'pg'
+  gem 'mini_racer'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

@@ -13,5 +13,6 @@ Rails.application.routes.draw do
   resources :todos
   resources :books
   resources :tests
+  resources :articles
   
 end

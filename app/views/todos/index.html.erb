@@ -1,10 +1,10 @@
 <h1> listing all Todos </h1>
 
-<p>
+<p class="btn  btn-xlarge">
   <%= link_to "Create a Todo",new_todo_path%>
 </p>
 
-<table>
+<table class="table">
   <tr>
     <th>Name</th>
     <th>Description</th>
@@ -12,12 +12,15 @@
 
   <% @todos.each do |todo|%>
     <tr>
-      <td><%= todo.name %></td>
-      <td><%= todo.description %></td>
-      <td><%= link_to "Edit",edit_todo_path(todo)%></td>
-      <td><%= link_to "Show", todo_path(todo)%></td>
-      <td><%= link_to "Delete",todo_path(todo),method: :delete, data: {confirm:"Are You Sure?"}%></td>
-
+      <td ><%= todo.name %></td>
+      <td ><%= todo.description %></td>
+    
+      <td class="actions ">
+      <%= link_to "Edit",edit_todo_path(todo),class:"btn  btn-xlarge"%>
+      <%= link_to "Show", todo_path(todo),class:"btn  btn-xlarge"%>
+      <%= link_to "Delete",todo_path(todo),class:"btn  btn-xlarge",method: :delete, data: {confirm:"Are You Sure?"}%>
+      </td>
+    
     </tr>
+
   <%end%>
-</table>

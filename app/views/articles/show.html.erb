@@ -1,0 +1,12 @@
+<h1> Showing  Article </h1>
+
+<p>
+    Title : <%= @article.title %>
+</p>
+
+<p>
+    About : <%= @article.about %>
+</p>
+
+<%= link_to "Edit Todo", edit_article_path(@article)%> |
+<%= link_to "Back to listing",articles_path%>
